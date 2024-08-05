@@ -24,3 +24,15 @@ npm install
 ```
 docker-compose up -d --build 
 ```
+
+## Ejecución de pruebas unitarias e integración
+1. Ingresar en el proyecto de microservice-2
+```
+cd microservice-2
+```
+
+2. Ejecutar el comando de pruebas
+```
+npm run test
+```
+
