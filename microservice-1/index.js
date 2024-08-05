@@ -23,7 +23,7 @@ app.use(cookie());
 app.use(cors());
 
 // Rutas
-app.use('/clientes', require('./routes/customer.route'));
+app.use('/api/clientes', require('./routes/customer.route'));
 
 app.use(function(req, res, next) {
     next(errors(404));

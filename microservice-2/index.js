@@ -22,8 +22,8 @@ app.use(cookie());
 app.use(cors());
 
 // Rutas
-app.use('/cuentas', require('./routes/account.route'));
-app.use('/movimientos', require('./routes/transaction.route'));
+app.use('/api/cuentas', require('./routes/account.route'));
+app.use('/api/movimientos', require('./routes/transaction.route'));
 
 
 app.use(function(req, res, next) {
