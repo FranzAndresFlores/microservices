@@ -5,7 +5,7 @@ const AccountModel = require('./models/account.model');
 const TransactionModel = require('./models/transaction.model');
 
 const dbName = process.env.NODE_ENV === 'test' ? process.env.DB_TEST : process.env.DB_NAME;
-const dbHost = process.env.NODE_ENV === 'test' ? process.env.DB_HOST_TEST : process.env.DB_NAME;
+const dbHost = process.env.NODE_ENV === 'test' ? process.env.DB_HOST_TEST : process.env.DB_HOST;
 
 const sequelize = new Sequelize(dbName, process.env.DB_USER, process.env.DB_PASSWORD, {
   host: dbHost,
