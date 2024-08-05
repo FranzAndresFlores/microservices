@@ -12,11 +12,6 @@ AccountController.create = async (req, res) => {
             return res.status(400).send(validate.error.details);
         }
 
-        const customer = await HttpCustomer.findOne(req.body.customerId);
-        if (!customer?.id) {
-            return res.status(400).send({message: 'No existe el cliente enviado'});
-        }
-
         const account = await Account.create({ ...req.body });
 
         return res.status(200).send(account);
