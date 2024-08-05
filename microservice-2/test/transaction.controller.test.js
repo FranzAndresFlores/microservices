@@ -19,7 +19,7 @@ afterAll(async () => {
 describe('Prueba de Integración - Crear cuenta y movimiento', () => {
     it('Debería crear una cuenta en BD', async () => {
         await request(app)
-            .post('/cuentas/create')
+            .post('/api/cuentas/create')
             .send({
                 number: '478758',
                 type: 'Ahorro',
@@ -34,7 +34,7 @@ describe('Prueba de Integración - Crear cuenta y movimiento', () => {
 
     it('Debería crear un movimiento en BD', async () => {
         await request(app)
-            .post('/movimientos/create')
+            .post('/api/movimientos/create')
             .send({
                 date: "2024-08-05",
                 type: "Ahorros",

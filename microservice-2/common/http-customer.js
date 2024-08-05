@@ -5,12 +5,12 @@ const HttpCustomer = {};
 
 HttpCustomer.findOne = async (customerId) => {
     try {
-        const url = process.env.TEST_URL + `/clientes/${customerId}`;
+        const microservice1Url = process.env.NODE_ENV === 'test' ? process.env.URL_MICROSERVICE : process.env.URL_MICROSERVICE_TEST;
+        const url = microservice1Url + `/api/clientes/${customerId}`;
         const response = await axios.get(url);
         return response.data;
     } catch (error) {
         console.log(error);
-        res.status(500).send({ message: 'Error al consultar cliente' });
     }
 }
 

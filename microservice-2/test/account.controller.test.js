@@ -1,6 +1,6 @@
 'use strict'
 
-const { validateAccount } = require('../models/account/accont.validator');
+const { validateAccount } = require('../validators/account.validator');
 
 describe('Prueba Unitaria - validación de datos cuenta', () => {
     it('debería validar los datos enviados en la cuenta', ()=> {
